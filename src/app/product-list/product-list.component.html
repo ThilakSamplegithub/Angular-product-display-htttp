@@ -1,0 +1,7 @@
+<div class="product-card" *ngFor="let product of products" (click)="navigateToProductDetails(product.id)" tabindex="0">
+  <!-- Add HTML structure for each product card -->
+  <img [src]="product.image" alt="{{ product.title }}" width="100" height="100"/>
+  <h2>{{ product.title.substring(0, 30) }}...</h2>
+  <p>{{ product.description.substring(0, 50) }}...</p>
+  <p>Price: ${{ product.price }}</p>
+</div>
